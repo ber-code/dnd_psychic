@@ -12,12 +12,14 @@ class ModelGPT2:
         inputs = self.tokenizer.encode(
             self.model_inputs.text_prompt, return_tensors="pt"
         )
+        input_text = self.tokenizer.decode(inputs[0], skip_special_tokens=True)
         outputs = self.model.generate(
             inputs,
-            max_length=self.model_inputs.output_wordcap,
+            max_length=self.model_inputs.output_wordcap + len(inputs[0]),
             do_sample=True,
             temperature=self.model_inputs.coherence,
-            top_k=30,
+            top_k=50,
+            no_repeat_ngram_size=2,
         )
         text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-        return text
+        return text[len(input_text) :]
