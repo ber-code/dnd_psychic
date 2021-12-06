@@ -14,9 +14,9 @@ def generate_fortune():
     model_inputs.generate_prompt()
     m = ModelGPT2(model_inputs)
     fortune = m.generate_fortune()
-    return fortune
+    return fortune + "..."
 
 
 @app.route("/fortune")
 def last_fortune():
-    return fortune
+    return fortune + "..."

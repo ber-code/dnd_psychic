@@ -1,4 +1,5 @@
 import source.constants as c
+from source.utils import slow_print
 
 
 def intro_name(quiz):
@@ -51,29 +52,29 @@ class Quiz:
             pass
         if self.q_ptr == 2:
             if not answer.isdigit() or int(answer) > 20 or int(answer) < 1:
-                print(c.INVAL_DICE_ONE)
+                slow_print(c.INVAL_DICE_ONE)
                 answer = input()
             while not answer.isdigit() or int(answer) > 20 or int(answer) < 1:
-                print(c.INVAL_DICE_TWO)
+                slow_print(c.INVAL_DICE_TWO)
                 answer = input()
             answer = int(answer)
             if answer == 20:
-                print(c.NAT_TWENTY)
+                slow_print(c.NAT_TWENTY)
             elif answer == 1:
-                print(c.NAT_ONE)
+                slow_print(c.NAT_ONE)
         if self.q_ptr == 3:
             pass
         if self.q_ptr == 4:
             while not answer.isdigit():
-                print(c.INVAL_PAYMENT)
+                slow_print(c.INVAL_PAYMENT)
                 answer = input()
             answer = int(answer)
             if answer > 100:
-                print(c.GENEROUS)
+                slow_print(c.GENEROUS)
         if self.q_ptr == len(QUESTIONS) - 1:
             answer = answer.lower()
             while answer not in set([c.BELIEVE, c.UNSURE, c.NONBELIEVER]):
-                print(c.INVAL_INSIGHT)
+                slow_print(c.INVAL_INSIGHT)
                 answer = input().lower()
         self.answers[self.q_ptr] = answer
         self.q_ptr += 1
