@@ -14,7 +14,7 @@ INVAL_DICE_TWO = "'I told you what 'icosa' means. Roll a real D20!'"
 NAT_TWENTY = "'Bless the skies - nat' 20 before my very eyes!'"
 NAT_ONE = "The blind lady fixes her eyes on you and blinks repeatedly. 'The last person who rolled a... oh, nevermind!'."
 INVAL_PAYMENT = "'I'm blind but I know what bronze pieces feel like. How much is this vision worth to you?'"
-GENEROUS = "You're in for a real yarn my friend!"
+GENEROUS = "'You're in for a real yarn my friend!'"
 INVAL_INSIGHT = "Be honest. 'Totally' , 'Maybe', or 'As if'."
 
 # valid boolean text responses
