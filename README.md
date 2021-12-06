@@ -19,4 +19,5 @@ See requirements.txt for the full list of dependencies.
 2) Run 'client.py'
 3) Follow text prompts to receive fortune
 
-## GIFs
+## Sample walkthrough
+![Sample fortune generation gif](https://github.com/ber-code/dnd_psychic/blob/main/Images/walkthrough_sample.gif)
