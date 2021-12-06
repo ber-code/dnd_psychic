@@ -5,6 +5,9 @@ The client prompts the user with a series of questions to gather text prompts an
 
 The server receives the responses to the client quiz and generates a custom fortune for the user to add color to their DND session.
 
+## Sample walkthrough
+![Sample fortune generation gif](https://github.com/ber-code/dnd_psychic/blob/main/Images/walkthrough_sample.gif)
+
 ## Installation
 The project relies on [HuggingFace's Transformers](https://huggingface.co/docs/transformers/index) library for interacting with GPT-2 to generate text fortunes.
 
@@ -19,5 +22,3 @@ See requirements.txt for the full list of dependencies.
 2) Run 'client.py'
 3) Follow text prompts to receive fortune
 
-## Sample walkthrough
-![Sample fortune generation gif](https://github.com/ber-code/dnd_psychic/blob/main/Images/walkthrough_sample.gif)
